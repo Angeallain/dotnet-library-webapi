@@ -24,7 +24,6 @@ C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\scopedcss\bundle\LibraryWebApp.styles.css
-C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\compressed\lpadl10e6s-{0}-4vjy5d38vn-4vjy5d38vn.gz
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\staticwebassets.development.json
@@ -36,3 +35,7 @@ C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\refint\LibraryWebApp.dll
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\LibraryWebApp.pdb
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\LibraryWebApp.genruntimeconfig.cache
 C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\ref\LibraryWebApp.dll
+C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\LibraryWebApp.sourcelink.json
+C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\compressed\p5xxrcfq24-{0}-evzniuze8k-evzniuze8k.gz
+C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\compressed\lpadl10e6s-{0}-6syi4i1irv-6syi4i1irv.gz
+C:\Users\wwwan\LibraryWebApp\obj\Debug\net10.0\compressed\b1wlnj6xk5-{0}-huh1phojdp-huh1phojdp.gz

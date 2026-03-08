@@ -59,6 +59,8 @@ LibraryWebApp/
 │   └── BookService.cs
 ├── wwwroot/
 │   └── index.html
+    └── style.css
+    └── app.js
 └── Program.cs
 ```
 

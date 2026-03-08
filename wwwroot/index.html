@@ -2,74 +2,39 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Library App</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; background: #f5f5f5; }
-    h1 { color: #1a2b4a; }
-    input { padding: 8px; margin-right: 8px; border: 1px solid #ccc; border-radius: 4px; }
-    button { padding: 8px 16px; background: #0d7377; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    button:hover { background: #0a5a5e; }
-    ul { list-style: none; padding: 0; }
-    li { background: white; margin: 8px 0; padding: 12px 16px; border-radius: 6px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    .available { color: green; font-weight: bold; }
-    .borrowed  { color: red;   font-weight: bold; }
-    .borrow-btn { padding: 5px 12px; font-size: 13px; background: #14a085; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Library App</h1>
 
-  <div>
-    <input id="title"  placeholder="Titre du livre" />
-    <input id="author" placeholder="Auteur" />
-    <button onclick="addBook()">Ajouter</button>
+  <div class="page">
+    <header>
+      <img src="book.png" alt="Library icon" class="header-icon" />
+      <div>
+        <h1>Library App</h1>
+        <p class="subtitle">Gérez votre collection de livres</p>
+      </div>
+    </header>
+
+    <section class="add-section">
+      <h2>Ajouter un livre</h2>
+      <div class="form-row">
+        <input id="title"  placeholder="Titre du livre" />
+        <input id="author" placeholder="Auteur" />
+        <button id="addBtn" onclick="addBook()">Ajouter</button>
+      </div>
+    </section>
+
+    <section class="list-section">
+      <h2>Liste des livres</h2>
+      <ul id="booksList"></ul>
+      <p id="emptyMsg" class="empty">Aucun livre pour l'instant. Ajoutez-en un !</p>
+    </section>
   </div>
 
-  <h2>Liste des livres :</h2>
-  <ul id="booksList"></ul>
-
-  <script>
-    async function loadBooks() {
-      const res   = await fetch('/api/book');
-      const books = await res.json();
-      const list  = document.getElementById('booksList');
-      list.innerHTML = '';
-      books.forEach(b => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <span><strong>${b.title}</strong> — ${b.author}</span>
-          <span>
-            <span class="${b.isBorrowed ? 'borrowed' : 'available'}">
-              ${b.isBorrowed ? 'Emprunté' : 'Disponible'}
-            </span>
-            ${!b.isBorrowed 
-              ? `<button class="borrow-btn" onclick="borrowBook(${b.id})">Emprunter</button>` 
-              : ''}
-          </span>`;
-        list.appendChild(li);
-      });
-    }
-
-    async function addBook() {
-      const title  = document.getElementById('title').value;
-      const author = document.getElementById('author').value;
-      if (!title || !author) return alert("Remplis les deux champs !");
-      await fetch('/api/book', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, author })
-      });
-      document.getElementById('title').value  = '';
-      document.getElementById('author').value = '';
-      loadBooks();
-    }
-
-    async function borrowBook(id) {
-      await fetch(`/api/book/${id}/borrow`, { method: 'PUT' });
-      loadBooks();
-    }
-
-    loadBooks();
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
