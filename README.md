@@ -68,7 +68,7 @@ LibraryWebApp/
 
 ## How to run
 
-**Prerequisites:** .NET 8 SDK (ou plus récent -pour ce petit projet j'ai utilisé cette version 10.0.103-) — download at https://dotnet.microsoft.com/download
+**Prerequisites:** .NET 8 SDK (or later -for this mini project this version 10.0.103 was used-) — download at https://dotnet.microsoft.com/download
 ```bash
 git clone https://github.com/Angeallain/dotnet-library-webapi.git
 cd dotnet-library-webapi
