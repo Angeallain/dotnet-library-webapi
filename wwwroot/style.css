@@ -6,7 +6,7 @@
   --teal-light: #14a085;
   --teal-pale:  #e6f4f1;
   --accent:     #f4a261;
-  --bg:         #f0f4f8;
+  --bg:         #faf7f4;
   --white:      #ffffff;
   --gray:       #64748b;
   --gray-light: #e2e8f0;
@@ -14,6 +14,8 @@
   --green:      #16a34a;
   --radius:     10px;
   --shadow:     0 2px 12px rgba(0,0,0,0.08);
+  --purple: #523079;
+  --purple-light: #8561ae;
 }
 
 body {
@@ -48,7 +50,7 @@ header {
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  color: var(--navy);
+  color: var(--purple);
   line-height: 1.1;
 }
 
@@ -75,7 +77,7 @@ h2 {
   padding: 24px;
   box-shadow: var(--shadow);
   margin-bottom: 28px;
-  border-top: 3px solid var(--teal);
+  border-top: 3px solid var(--purple);
 }
 
 .list-section {
@@ -107,7 +109,7 @@ input {
 }
 
 input:focus {
-  border-color: var(--teal);
+  border-color: var(--purple);
   background: var(--white);
 }
 
@@ -115,7 +117,7 @@ input::placeholder { color: #aab; }
 
 button {
   padding: 10px 22px;
-  background: var(--teal);
+  background: var(--purple);
   color: var(--white);
   border: none;
   border-radius: 7px;
@@ -127,7 +129,7 @@ button {
   white-space: nowrap;
 }
 
-button:hover  { background: var(--teal-light); }
+button:hover  { background: var(--purple-light); }
 button:active { transform: scale(0.97); }
 
 /* ── Book list ── */
@@ -191,7 +193,7 @@ li {
   background: var(--navy);
 }
 
-.borrow-btn:hover { background: var(--teal); }
+.borrow-btn:hover { background: var(--purple); }
 
 /* ── Empty state ── */
 .empty {
